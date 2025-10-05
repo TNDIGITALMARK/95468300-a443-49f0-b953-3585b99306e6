@@ -14,26 +14,34 @@ All colors MUST be HSL.
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  /* Medical Blue Primary Colors - matching design reference */
+  --primary: 210 100% 45%; /* Medical blue from design */
+  --primary-foreground: 0 0% 100%;
 
   --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
+  --secondary-foreground: 210 100% 45%;
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: 210 100% 45%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
   --border: 214.3 31.8% 91.4%;
   --input: 214.3 31.8% 91.4%;
-  --ring: 222.2 84% 4.9%;
+  --ring: 210 100% 45%;
 
   --radius: 0.5rem;
+
+  /* TeleHealth specific colors */
+  --medical-blue: 210 100% 45%;
+  --medical-blue-light: 210 100% 85%;
+  --medical-blue-dark: 210 100% 35%;
+  --trust-green: 142 71% 45%;
+  --warning-orange: 25 95% 53%;
 
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5.3% 26.1%;
@@ -124,7 +132,14 @@ All colors MUST be HSL.
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
-  
+
+  /* TeleHealth Brand Colors */
+  --color-medical-blue: hsl(var(--medical-blue));
+  --color-medical-blue-light: hsl(var(--medical-blue-light));
+  --color-medical-blue-dark: hsl(var(--medical-blue-dark));
+  --color-trust-green: hsl(var(--trust-green));
+  --color-warning-orange: hsl(var(--warning-orange));
+
   /* Border Radius */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
