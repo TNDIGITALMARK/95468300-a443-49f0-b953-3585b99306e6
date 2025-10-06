@@ -84,8 +84,8 @@ export default function ProviderProfilePage() {
                         if (fallback) fallback.style.display = 'flex';
                       }}
                     />
-                    <div className="w-32 h-32 bg-gray-200 rounded-full hidden items-center justify-center">
-                      <span className="text-4xl font-semibold text-gray-600">
+                    <div className="w-32 h-32 bg-muted rounded-full hidden items-center justify-center">
+                      <span className="text-4xl font-semibold text-muted-foreground">
                         {provider.name.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>

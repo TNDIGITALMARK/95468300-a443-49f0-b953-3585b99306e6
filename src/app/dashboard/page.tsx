@@ -24,11 +24,11 @@ export default function PatientDashboard() {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'scheduled': return 'bg-blue-100 text-blue-800';
-      case 'completed': return 'bg-green-100 text-green-800';
-      case 'cancelled': return 'bg-red-100 text-red-800';
-      case 'in-progress': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'scheduled': return 'bg-primary/20 text-primary';
+      case 'completed': return 'bg-trust-green/20 text-trust-green';
+      case 'cancelled': return 'bg-destructive/20 text-destructive';
+      case 'in-progress': return 'bg-warning-orange/20 text-warning-orange';
+      default: return 'bg-muted text-muted-foreground';
     }
   };
 

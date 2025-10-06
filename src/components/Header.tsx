@@ -9,15 +9,15 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm border-b">
+    <header className="bg-card shadow-sm border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Plus className="w-5 h-5 text-white" />
+              <Plus className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-xl text-gray-900">
+            <span className="font-bold text-xl text-foreground">
               TeleHealth Connect
             </span>
           </Link>
@@ -26,25 +26,25 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground font-medium transition-colors"
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground font-medium transition-colors"
             >
               Services
             </Link>
             <Link
               href="/providers"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground font-medium transition-colors"
             >
               Providers
             </Link>
             <Link
               href="/book-appointment"
-              className="text-gray-600 hover:text-gray-900 font-medium transition-colors"
+              className="text-muted-foreground hover:text-foreground font-medium transition-colors"
             >
               Book Appointment
             </Link>
@@ -59,7 +59,7 @@ export function Header() {
               </Button>
             </Link>
             <Link href="/book-appointment">
-              <Button className="bg-primary hover:bg-primary/90 text-white flex items-center space-x-2">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground flex items-center space-x-2">
                 <Calendar className="w-4 h-4" />
                 <span>Book Now</span>
               </Button>
@@ -81,32 +81,32 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t bg-white">
+          <div className="md:hidden border-t bg-card">
             <div className="px-4 py-2 space-y-1">
               <Link
                 href="/"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 font-medium"
+                className="block px-3 py-2 text-muted-foreground hover:text-foreground font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/services"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 font-medium"
+                className="block px-3 py-2 text-muted-foreground hover:text-foreground font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/providers"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 font-medium"
+                className="block px-3 py-2 text-muted-foreground hover:text-foreground font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Providers
               </Link>
               <Link
                 href="/book-appointment"
-                className="block px-3 py-2 text-gray-600 hover:text-gray-900 font-medium"
+                className="block px-3 py-2 text-muted-foreground hover:text-foreground font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book Appointment
@@ -124,7 +124,7 @@ export function Header() {
                 </Link>
                 <Link href="/book-appointment">
                   <Button
-                    className="w-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center space-x-2"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground flex items-center justify-center space-x-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <Calendar className="w-4 h-4" />

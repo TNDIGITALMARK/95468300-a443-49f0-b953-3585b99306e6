@@ -29,18 +29,18 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-20">
+      <section className="bg-gradient-to-r from-muted to-accent py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-foreground mb-6">
               Healthcare <span className="text-primary">From Home</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Connect with top healthcare providers from the comfort of your home.
               Book appointments, get consultations, and manage your health online.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
                 Start Consultation
               </Button>
               <Button variant="outline" size="lg" className="px-8 py-3">
@@ -52,39 +52,39 @@ export default function HomePage() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-card border-b">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col items-center">
               <Shield className="w-8 h-8 text-primary mb-2" />
-              <span className="text-sm font-medium text-gray-600">HIPAA Compliant</span>
+              <span className="text-sm font-medium text-muted-foreground">HIPAA Compliant</span>
             </div>
             <div className="flex flex-col items-center">
               <Star className="w-8 h-8 text-primary mb-2" />
-              <span className="text-sm font-medium text-gray-600">Board Certified</span>
+              <span className="text-sm font-medium text-muted-foreground">Board Certified</span>
             </div>
             <div className="flex flex-col items-center">
               <Clock className="w-8 h-8 text-primary mb-2" />
-              <span className="text-sm font-medium text-gray-600">24/7 Available</span>
+              <span className="text-sm font-medium text-muted-foreground">24/7 Available</span>
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-primary mb-2" />
-              <span className="text-sm font-medium text-gray-600">Nationwide</span>
+              <span className="text-sm font-medium text-muted-foreground">Nationwide</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Search & Filter Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Find Your Provider</h2>
 
-            <div className="bg-white rounded-lg p-6 shadow-sm border">
+            <div className="bg-card rounded-lg p-6 shadow-sm border">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="md:col-span-2 relative">
-                  <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                  <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                   <Input
                     placeholder="Search providers or specialties..."
                     className="pl-10"
@@ -130,7 +130,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-2xl font-bold">Our Top Providers</h2>
-              <p className="text-gray-600">{filteredProviders.length} providers found</p>
+              <p className="text-muted-foreground">{filteredProviders.length} providers found</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -150,15 +150,15 @@ export default function HomePage() {
                             if (fallback) fallback.style.display = 'flex';
                           }}
                         />
-                        <div className="w-16 h-16 bg-gray-200 rounded-full hidden items-center justify-center">
-                          <span className="text-xl font-semibold text-gray-600">
+                        <div className="w-16 h-16 bg-muted rounded-full hidden items-center justify-center">
+                          <span className="text-xl font-semibold text-muted-foreground">
                             {provider.name.split(' ').map(n => n[0]).join('')}
                           </span>
                         </div>
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg">{provider.name}</h3>
-                        <p className="text-gray-600">{provider.title}</p>
+                        <p className="text-muted-foreground">{provider.title}</p>
                         <Badge variant="secondary" className="mt-1">
                           {provider.specialty}
                         </Badge>
@@ -169,18 +169,18 @@ export default function HomePage() {
                       <div className="flex items-center mr-4">
                         <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
                         <span className="font-medium">{provider.rating}</span>
-                        <span className="text-gray-600 text-sm ml-1">
+                        <span className="text-muted-foreground text-sm ml-1">
                           ({provider.reviewCount} reviews)
                         </span>
                       </div>
                     </div>
 
                     <div className="space-y-2 mb-4">
-                      <div className="flex items-center text-sm text-gray-600">
+                      <div className="flex items-center text-sm text-muted-foreground">
                         <MapPin className="w-4 h-4 mr-2" />
                         {provider.location}
                       </div>
-                      <div className="flex items-center text-sm text-gray-600">
+                      <div className="flex items-center text-sm text-muted-foreground">
                         <Clock className="w-4 h-4 mr-2" />
                         Next available: Today
                       </div>
@@ -191,7 +191,7 @@ export default function HomePage() {
                         <span className="text-2xl font-bold text-primary">
                           ${provider.consultationFee}
                         </span>
-                        <span className="text-gray-600 text-sm ml-1">consultation</span>
+                        <span className="text-muted-foreground text-sm ml-1">consultation</span>
                       </div>
                       <Link href={`/providers/${provider.id}`}>
                         <Button size="sm">
@@ -208,7 +208,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Health Journey?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
